@@ -1,29 +1,31 @@
 import 'package:flutter/material.dart';
 import '../../../constants/constants.dart';
+import '../../../models/learning_model.dart';
 import '../../learning_screen/learning_screen.dart';
 import '../constants.dart';
 import 'package:get/get.dart';
 
 class LearningCard extends StatelessWidget {
-  const LearningCard({
-    super.key,
-    required this.image,
-    required this.subTitle,
-    required this.title,
-    required this.percentage,
-  });
+  const LearningCard(
+      {super.key,
+      // required this.image,
+      // required this.subTitle,
+      // required this.title,
+      // required this.percentage,
+      required this.continuelearning});
 
-  final String title;
-  final String subTitle;
-  final String percentage;
-  final String image;
+  // final String title;
+  // final String subTitle;
+  // final String percentage;
+  // final String image;
+  final LearningModel continuelearning;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
         Get.to(
-          () => const LearningScreen(),
+          () => LearningScreen(continuelearning: continuelearning),
         );
       },
       child: Padding(
@@ -43,14 +45,14 @@ class LearningCard extends StatelessWidget {
                         height: 10,
                       ),
                       Text(
-                        subTitle,
+                        continuelearning.subTitle,
                         style: kGreetingTextStyle,
                       ),
                       const SizedBox(
                         height: 8,
                       ),
-                       Text(
-                       title,
+                      Text(
+                        continuelearning.title,
                         style: kCardTitleTextStyle,
                       ),
                       const SizedBox(
@@ -59,7 +61,7 @@ class LearningCard extends StatelessWidget {
                       Row(
                         children: [
                           Text(
-                            percentage,
+                            continuelearning.percentage,
                             style: kGreetingTextStyle,
                           ),
                         ],
@@ -74,7 +76,7 @@ class LearningCard extends StatelessWidget {
                 width: 120,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage(image),
+                    image: AssetImage(continuelearning.image),
                     fit: BoxFit.cover,
                   ),
                   borderRadius: BorderRadius.circular(

@@ -5,11 +5,13 @@ import 'package:online_learning/widgets/appbar.dart';
 import 'package:online_learning/view/learning_screen/widgets/bottom_round_container.dart';
 import 'package:online_learning/view/learning_screen/widgets/rounded_container.dart';
 import '../../constants/constants.dart';
+import '../../models/learning_model.dart';
 import '../../widgets/custom_button.dart';
 import '../enroll screen/enroll_screen.dart';
 
 class LearningScreen extends StatelessWidget {
-  const LearningScreen({super.key});
+  const LearningScreen({super.key, required this.continuelearning});
+  final  LearningModel continuelearning;
 
   @override
   Widget build(BuildContext context) {
@@ -30,9 +32,9 @@ class LearningScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  '3D Art & Illustration with Midjourney',
-                  style: TextStyle(
+                Text(
+                  continuelearning.title,
+                  style: const TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.w600,
                   ),
@@ -44,9 +46,9 @@ class LearningScreen extends StatelessWidget {
                   height: 200,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    image: const DecorationImage(
-                      image: AssetImage("assets/images/learning3.jpg"),
-                      fit: BoxFit.fill,
+                    image: DecorationImage(
+                      image: AssetImage(continuelearning.image),
+                      fit: BoxFit.cover,
                     ),
                     borderRadius: BorderRadius.circular(
                       20,
@@ -54,9 +56,9 @@ class LearningScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 8),
-                const RoundedContainer(
-                  image: 'assets/images/learning.png',
-                  text: 'Midjourney',
+                 RoundedContainer(
+                  image: continuelearning.image2,
+                  text:continuelearning.subTitle,
                 ),
                 const SizedBox(
                   height: 15,

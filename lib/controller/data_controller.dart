@@ -17,24 +17,28 @@ class DataController extends GetxController {
           title: '3D Art & Illustration with Midjourney',
           image: 'assets/images/learning3.jpg',
           percentage: '69%',
+          image2:  'assets/images/profile.jpg',
         ),
         LearningModel(
           subTitle: 'Animation',
-          title: 'Animation and Vfx',
+          title: 'Learn 3D Animation with Midjourney ',
           image: 'assets/images/learning.png',
           percentage: '50%',
+           image2:  'assets/images/profile.jpg',
         ),
         LearningModel(
           subTitle: 'Coding',
-          title: 'Learn to code',
+          title: 'Learn coding with Midjourney',
           image: 'assets/images/learning2.jpg',
           percentage: '55%',
+           image2:  'assets/images/learning3.jpg',
         ),
         LearningModel(
           subTitle: '3D Designs',
           title: '3D Art & Illustration with Midjourney',
           image: 'assets/images/profile.jpg',
           percentage: '69%',
+          image2:  'assets/images/profile.jpg',
         ),
       ],
       pendingTasks: [
@@ -67,13 +71,14 @@ class DataController extends GetxController {
     DataModel(
       userName: 'Clint Jose',
       profieImage: 'assets/images/profile.jpg',
-      id: 001,
+      id: 002,
       continueLearning: [
         LearningModel(
           subTitle: 'Animation',
           title: 'Animation and Vfx',
           image: 'assets/images/learning2.jpg',
           percentage: '50%',
+          image2:  'assets/images/profile.jpg',
         ),
       ],
       pendingTasks: [
@@ -88,13 +93,14 @@ class DataController extends GetxController {
     DataModel(
       userName: 'Arun Thambi',
       profieImage: 'assets/images/profile.jpg',
-      id: 001,
+      id: 003,
       continueLearning: [
         LearningModel(
           subTitle: 'Coding',
           title: 'Learn to code',
           image: 'assets/images/learning3.jpg',
           percentage: '55%',
+          image2:  'assets/images/profile.jpg',
         ),
       ],
       pendingTasks: [
@@ -109,13 +115,14 @@ class DataController extends GetxController {
     DataModel(
       userName: 'Philip Chacko',
       profieImage: 'assets/images/profile.jpg',
-      id: 001,
+      id: 004,
       continueLearning: [
         LearningModel(
           subTitle: '3D Designs',
           title: '3D Art & Illustration with Midjourney',
           image: 'assets/images/learning3.jpg',
           percentage: '69%',
+          image2:  'assets/images/profile.jpg',
         ),
       ],
       pendingTasks: [

@@ -80,16 +80,16 @@ class HomeScreen extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 itemCount: dataController.data[userid].continueLearning.length,
                 itemBuilder: (context, index) {
-                  return LearningCard(
-                    image: dataController
-                        .data[userid].continueLearning[index].image,
-                    subTitle: dataController
-                        .data[userid].continueLearning[index].subTitle,
-                    title: dataController
-                        .data[userid].continueLearning[index].title,
-                    percentage: dataController
-                        .data[userid].continueLearning[index].percentage,
-                  );
+                  return LearningCard(continuelearning: dataController.data[userid].continueLearning[index],);
+                    // image: dataController
+                    //     .data[userid].continueLearning[index].image,
+                    // subTitle: dataController
+                    //     .data[userid].continueLearning[index].subTitle,
+                    // title: dataController
+                    //     .data[userid].continueLearning[index].title,
+                    // percentage: dataController
+                    //     .data[userid].continueLearning[index].percentage,
+                 // );
                 },
               ),
             ),

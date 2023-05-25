@@ -8,7 +8,8 @@ import 'widgets/hour_rating_widgets.dart';
 import 'widgets/week_card.dart';
 
 class EnrollScreen extends StatelessWidget {
-  const EnrollScreen({super.key});
+  const EnrollScreen({super.key,});
+  
 
   @override
   Widget build(BuildContext context) {

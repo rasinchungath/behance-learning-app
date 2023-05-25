@@ -45,7 +45,7 @@ class PendingTasksCard extends StatelessWidget {
                     shape: BoxShape.circle,
                     image: DecorationImage(
                       image: AssetImage(image),
-                      fit: BoxFit.fill,
+                      fit: BoxFit.cover,
                     ),
                   ),
                 ),
