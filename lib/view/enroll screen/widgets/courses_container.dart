@@ -4,7 +4,17 @@ import 'hour_rating_widgets.dart';
 import 'locked_courses.dart';
 
 class CoursesContainer extends StatelessWidget {
-  const CoursesContainer({super.key});
+  CoursesContainer({
+    super.key,
+    required this.title,
+    required this.subTitle,
+    required this.videoCount,
+    required this.time
+  });
+  String title;
+  String subTitle;
+  int videoCount;
+  String time;
 
   @override
   Widget build(BuildContext context) {
@@ -30,9 +40,9 @@ class CoursesContainer extends StatelessWidget {
             right: 15,
             bottom: 15,
           ),
-          title: const Text(
-            'Introduction to Midjourney',
-            style: TextStyle(
+          title: Text(
+           title,
+            style: const TextStyle(
               fontSize: 12,
               fontWeight: FontWeight.w600,
               color: Colors.black,
@@ -40,17 +50,17 @@ class CoursesContainer extends StatelessWidget {
           ),
           subtitle: HourRatingWidgets(
             icon1: Icons.video_call_rounded,
-            text1: '4 Videos',
+            text1: '$videoCount Videos',
             icon2: Icons.access_time,
-            text2: '80h:30min',
+            text2: time,
           ),
           children: <Widget>[
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
-                  'Midjourney Cousre Introduction',
-                  style: TextStyle(
+                Text(
+                  subTitle,
+                  style: const TextStyle(
                     fontSize: 10,
                     fontWeight: FontWeight.w500,
                   ),

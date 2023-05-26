@@ -3,7 +3,7 @@ import '../../../constants/constants.dart';
 import '../../home screen/widgets/circular_container.dart';
 
 class RoundedContainer extends StatelessWidget {
-  const RoundedContainer({super.key, required this.image, required this.text});
+  const RoundedContainer({super.key, required this.image, required this.text,});
   final String image;
   final String text;
 

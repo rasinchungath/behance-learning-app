@@ -1,13 +1,37 @@
 class LearningModel {
-  LearningModel(
-      {required this.subTitle,
-      required this.title,
-      required this.image,
-      required this.percentage,
-      required this.image2});
+  LearningModel({
+    required this.subTitle,
+    required this.title,
+    required this.image,
+    required this.percentage,
+    required this.image2,
+    required this.lessonsCount,
+    required this.time,
+    required this.ratings,
+    required this.weeks,
+    required this.topics,
+  });
   String subTitle;
   String title;
   String image;
-  String percentage;
+  int percentage;
   String image2;
+  int lessonsCount;
+  String time;
+  double ratings;
+  int weeks;
+  List<Topics> topics;
+}
+
+class Topics {
+  Topics({
+    required this.title,
+    required this.subTitle,
+    required this.videoCount,
+    required this.time
+  });
+  String title;
+  String subTitle;
+  int videoCount;
+  String time;
 }

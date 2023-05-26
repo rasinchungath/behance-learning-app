@@ -2,14 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:online_learning/widgets/appbar.dart';
 import '../../constants/constants.dart';
+import '../../models/learning_model.dart';
 import '../../widgets/custom_button.dart';
 import 'widgets/courses_container.dart';
 import 'widgets/hour_rating_widgets.dart';
 import 'widgets/week_card.dart';
 
 class EnrollScreen extends StatelessWidget {
-  const EnrollScreen({super.key,});
-  
+  const EnrollScreen({
+    super.key,
+    required this.continuelearning,
+  });
+  final LearningModel continuelearning;
 
   @override
   Widget build(BuildContext context) {
@@ -41,11 +45,11 @@ class EnrollScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20),
                         color: Colors.blue,
                       ),
-                      child: const Padding(
-                        padding: EdgeInsets.all(5.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(5.0),
                         child: Text(
-                          '3D Design',
-                          style: TextStyle(
+                          continuelearning.subTitle,
+                          style: const TextStyle(
                             fontSize: 9,
                             fontWeight: FontWeight.w500,
                             color: Colors.white,
@@ -56,9 +60,9 @@ class EnrollScreen extends StatelessWidget {
                     const SizedBox(
                       height: 10,
                     ),
-                    const Text(
-                      '3D Art & Illustration with Midjourney',
-                      style: TextStyle(
+                    Text(
+                      continuelearning.title,
+                      style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w600,
                       ),
@@ -68,9 +72,9 @@ class EnrollScreen extends StatelessWidget {
                     ),
                     HourRatingWidgets(
                       icon1: Icons.access_time,
-                      text1: '80h:30min',
+                      text1: continuelearning.time,
                       icon2: Icons.star,
-                      text2: '4.9 Ratings',
+                      text2: '${continuelearning.ratings} Ratings',
                       color: kstarColor,
                     ),
                   ],
@@ -84,9 +88,11 @@ class EnrollScreen extends StatelessWidget {
                 child: ListView.builder(
                   physics: const BouncingScrollPhysics(),
                   scrollDirection: Axis.horizontal,
-                  itemCount: 4,
+                  itemCount: continuelearning.weeks,
                   itemBuilder: (context, index) {
-                    return WeekCard(weeks: index,);
+                    return WeekCard(
+                      weeks: index,
+                    );
                   },
                 ),
               ),
@@ -98,7 +104,12 @@ class EnrollScreen extends StatelessWidget {
                 physics: const NeverScrollableScrollPhysics(),
                 itemCount: 4,
                 itemBuilder: (context, index) {
-                  return const CoursesContainer();
+                  return CoursesContainer(
+                    title: continuelearning.topics[index].title,
+                    subTitle: continuelearning.topics[index].subTitle,
+                    videoCount: continuelearning.topics[index].videoCount,
+                    time:continuelearning.topics[index].time,
+                  );
                 },
               ),
             ],

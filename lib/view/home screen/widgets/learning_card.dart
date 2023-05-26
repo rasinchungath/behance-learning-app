@@ -6,18 +6,8 @@ import '../constants.dart';
 import 'package:get/get.dart';
 
 class LearningCard extends StatelessWidget {
-  const LearningCard(
-      {super.key,
-      // required this.image,
-      // required this.subTitle,
-      // required this.title,
-      // required this.percentage,
-      required this.continuelearning});
+  const LearningCard({super.key, required this.continuelearning});
 
-  // final String title;
-  // final String subTitle;
-  // final String percentage;
-  // final String image;
   final LearningModel continuelearning;
 
   @override
@@ -61,8 +51,20 @@ class LearningCard extends StatelessWidget {
                       Row(
                         children: [
                           Text(
-                            continuelearning.percentage,
+                            '${continuelearning.percentage}%',
                             style: kGreetingTextStyle,
+                          ),
+                          const SizedBox(
+                            width: 7,
+                          ),
+                           Expanded(
+                            child: LinearProgressIndicator(
+                              valueColor:
+                                  const AlwaysStoppedAnimation<Color>(Colors.black),
+                              backgroundColor: Colors.grey.shade400,
+                              minHeight: 3,
+                              value: (continuelearning.percentage/100),
+                            ),
                           ),
                         ],
                       ),

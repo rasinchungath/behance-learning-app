@@ -10,7 +10,7 @@ import '../../widgets/custom_button.dart';
 import '../enroll screen/enroll_screen.dart';
 
 class LearningScreen extends StatelessWidget {
-  const LearningScreen({super.key, required this.continuelearning});
+  const LearningScreen({super.key, required this.continuelearning,});
   final  LearningModel continuelearning;
 
   @override
@@ -74,11 +74,11 @@ class LearningScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     BottomRoundContainer(
-                        icon: Icons.auto_stories_outlined, text: '22 Lessons'),
+                        icon: Icons.auto_stories_outlined, text: '${continuelearning.lessonsCount} Lessons',),
                     BottomRoundContainer(
-                        icon: Icons.access_time, text: '80h:30min'),
+                        icon: Icons.access_time, text: continuelearning.time,),
                     BottomRoundContainer(
-                        icon: Icons.star_border_outlined, text: '4.9 Ratings'),
+                        icon: Icons.star_border_outlined, text: '${continuelearning.ratings} Ratings',),
                   ],
                 ),
               ],
@@ -93,7 +93,7 @@ class LearningScreen extends StatelessWidget {
               label: 'Enroll for free',
               onpressed: () {
                 Get.to(
-                  () => const EnrollScreen(),
+                  () => EnrollScreen(continuelearning: continuelearning),
                 );
               },
             ),
