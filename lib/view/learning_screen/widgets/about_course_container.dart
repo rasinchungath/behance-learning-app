@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../constants/constants.dart';
+import 'read_more.dart';
 
 class AboutCourseContainer extends StatelessWidget {
   const AboutCourseContainer({super.key, required this.title, required this.description});
@@ -21,12 +22,7 @@ class AboutCourseContainer extends StatelessWidget {
               title,
               style: kCardTitleTextStyle,
             ),
-            Text(
-             description,
-              style: const TextStyle(
-                fontSize: 9,
-              ),
-            ),
+            DescriptionTextWidget(text: description,),
           ],
         ),
       ),

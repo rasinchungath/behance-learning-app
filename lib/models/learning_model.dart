@@ -24,12 +24,11 @@ class LearningModel {
 }
 
 class Topics {
-  Topics({
-    required this.title,
-    required this.subTitle,
-    required this.videoCount,
-    required this.time
-  });
+  Topics(
+      {required this.title,
+      required this.subTitle,
+      required this.videoCount,
+      required this.time});
   String title;
   String subTitle;
   int videoCount;

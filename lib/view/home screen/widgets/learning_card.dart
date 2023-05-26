@@ -57,13 +57,13 @@ class LearningCard extends StatelessWidget {
                           const SizedBox(
                             width: 7,
                           ),
-                           Expanded(
+                          Expanded(
                             child: LinearProgressIndicator(
-                              valueColor:
-                                  const AlwaysStoppedAnimation<Color>(Colors.black),
+                              valueColor: const AlwaysStoppedAnimation<Color>(
+                                  Colors.black),
                               backgroundColor: Colors.grey.shade400,
                               minHeight: 3,
-                              value: (continuelearning.percentage/100),
+                              value: (continuelearning.percentage / 100),
                             ),
                           ),
                         ],

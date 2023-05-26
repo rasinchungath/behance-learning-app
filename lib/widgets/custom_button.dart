@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import '../constants/constants.dart';
 
 class CustomButton extends StatelessWidget {
@@ -31,12 +30,11 @@ class CustomButton extends StatelessWidget {
         onPressed: onpressed,
         child: Text(
           label,
-          style: GoogleFonts.poppins(
-            textStyle: const TextStyle(
+            style: const TextStyle(
               color: Colors.black,
               fontSize: 12,
               fontWeight: FontWeight.w500,
-            ),
+            
           ),
         ),
       ),

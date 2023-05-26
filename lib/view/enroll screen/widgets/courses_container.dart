@@ -4,13 +4,12 @@ import 'hour_rating_widgets.dart';
 import 'locked_courses.dart';
 
 class CoursesContainer extends StatelessWidget {
-  CoursesContainer({
-    super.key,
-    required this.title,
-    required this.subTitle,
-    required this.videoCount,
-    required this.time
-  });
+  CoursesContainer(
+      {super.key,
+      required this.title,
+      required this.subTitle,
+      required this.videoCount,
+      required this.time});
   String title;
   String subTitle;
   int videoCount;
@@ -41,7 +40,7 @@ class CoursesContainer extends StatelessWidget {
             bottom: 15,
           ),
           title: Text(
-           title,
+            title,
             style: const TextStyle(
               fontSize: 12,
               fontWeight: FontWeight.w600,

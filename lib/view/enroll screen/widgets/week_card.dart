@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 class WeekCard extends StatefulWidget {
-  WeekCard({super.key, required this.weeks});
+  const WeekCard({super.key, required this.weeks, required this.index});
   final int weeks;
+  final int index;
 
   @override
   State<WeekCard> createState() => _WeekCardState();
@@ -28,7 +29,8 @@ class _WeekCardState extends State<WeekCard> {
             width: 1.5,
             color: Colors.black87,
           ),
-          color: selected ? Colors.black : null,
+          color: widget.index==0? Colors.black : null,
+          // selected ? Colors.black : null,
         ),
         child: Padding(
           padding: const EdgeInsets.only(
@@ -42,7 +44,8 @@ class _WeekCardState extends State<WeekCard> {
             style: TextStyle(
               fontSize: 10,
               fontWeight: FontWeight.w600,
-              color: selected ? Colors.white : null,
+              color: widget.index==0? Colors.white : null,
+              //selected ? Colors.white : null,
             ),
           ),
         ),

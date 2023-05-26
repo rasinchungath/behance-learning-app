@@ -7,7 +7,7 @@ import '../models/popular_cousre_model.dart';
 class DataController extends GetxController {
   List<DataModel> data = [
     DataModel(
-      userName: 'Abraham Koshy',
+      userName: 'Rasin Chungath',
       profieImage: 'assets/images/profile.jpg',
       id: 001,
       continueLearning: [
@@ -164,13 +164,13 @@ class DataController extends GetxController {
         PendingTask(
           image: 'assets/images/learning.png',
           subTitle: 'Introduction to UI/UX',
-          title: 'Travel Guide app Wire frame',
+          title: 'Travel Guide App Wire frame',
           date: 'Sat,8,2023',
         ),
         PendingTask(
           image: 'assets/images/learning3.jpg',
           subTitle: 'Artificial intelligence',
-          title: 'Wekcome to the world of AI',
+          title: 'Welcome to the world of AI',
           date: 'Tue,4,2020',
         ),
         PendingTask(

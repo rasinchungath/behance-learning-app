@@ -92,6 +92,7 @@ class EnrollScreen extends StatelessWidget {
                   itemBuilder: (context, index) {
                     return WeekCard(
                       weeks: index,
+                      index: index,
                     );
                   },
                 ),
@@ -108,7 +109,7 @@ class EnrollScreen extends StatelessWidget {
                     title: continuelearning.topics[index].title,
                     subTitle: continuelearning.topics[index].subTitle,
                     videoCount: continuelearning.topics[index].videoCount,
-                    time:continuelearning.topics[index].time,
+                    time: continuelearning.topics[index].time,
                   );
                 },
               ),
