@@ -2,184 +2,100 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:online_learning/view/home%20screen/widgets/appbar.dart';
 import '../../constants/constants.dart';
-import '../../controller/data_controller.dart';
-import 'constants.dart';
-import 'widgets/learning_card.dart';
-import 'widgets/pending_tasks_card.dart';
-import 'widgets/popular_course_card.dart';
+import '../../controller/bottom_navigation_controller.dart';
+import '../../widgets/appbar.dart';
+import '../messages/messages.dart';
+import '../downloads/downloads.dart';
+import '../settings/settings.dart';
+import 'widgets/home.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
 
-  final dataController = Get.put(DataController());
-  int userid = 0;
+  final _controller = Get.put(BottomNavigationController());
+
+  final List<Widget> _screens = [
+    Home(),
+    const Messages(),
+    const Downloads(),
+    const Settings(),
+  ];
+
+  AppBar appbar(int currentIndex) {
+    if (currentIndex == 0) {
+      return customHomeAppbar();
+    } else if (currentIndex == 1) {
+      return customAppbar(
+        title: 'Messages',
+        icon1: Icons.account_circle,
+        icon2: Icons.abc,
+        onPressedIcon1: () {},
+        onPressedIcon2: () {},
+      );
+    } else if (currentIndex == 2) {
+      return customAppbar(
+        title: 'Downloads',
+        icon1: Icons.download,
+        icon2: Icons.delete,
+        onPressedIcon1: () {},
+        onPressedIcon2: () {},
+      );
+    } else {
+      return customAppbar(
+        title: 'Settings',
+        icon1: Icons.account_circle,
+        icon2: Icons.settings,
+        onPressedIcon1: () {},
+        onPressedIcon2: () {},
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: Scaffold(
-      appBar: customHomeAppbar(),
-      body: SingleChildScrollView(
-        physics: const BouncingScrollPhysics(),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(
-              height: 8,
-            ),
-            const Padding(
-              padding: EdgeInsets.only(
-                left: 15,
-              ),
-              child: Text(
-                'Good morning 👋',
-                style: kGreetingTextStyle,
-              ),
-            ),
-            const SizedBox(
-              height: 6,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                left: 15,
-              ),
-              child: Text(
-                dataController.data[userid].userName,
-                style: kNameTextStyle,
-              ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                left: 15,
-                right: 15,
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Text(
-                    'Continue learning',
-                    style: kTitleTextStyle,
-                  ),
-                  Icon(
-                    Icons.more_horiz,
-                    size: 30,
-                  ),
-                ],
+      child: Obx(
+        () => Scaffold(
+          appBar: appbar(_controller.currentIndex.value),
+          extendBody: true,
+          body: _screens[_controller.currentIndex.value],
+          bottomNavigationBar: Padding(
+            padding: const EdgeInsets.only(bottom: 10, right: 25, left: 25),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(32),
+              child: SizedBox(
+                height: 65,
+                child: BottomNavigationBar(
+                  backgroundColor: Colors.black,
+                  selectedItemColor: kprimaryColor,
+                  iconSize: 20,
+                  currentIndex: _controller.currentIndex.value,
+                  onTap: (index) => _controller.changeTabIndex(index),
+                  items: const [
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.home),
+                      label: 'Home',
+                      backgroundColor: Colors.black,
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.message),
+                      label: 'Messages',
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.download),
+                      label: 'Downloads',
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.settings),
+                      label: 'Settings',
+                    ),
+                  ],
+                ),
               ),
             ),
-            const SizedBox(
-              height: 6,
-            ),
-            SizedBox(
-              height: 160,
-              child: ListView.builder(
-                physics: const BouncingScrollPhysics(),
-                scrollDirection: Axis.horizontal,
-                itemCount: dataController.data[userid].continueLearning.length,
-                itemBuilder: (context, index) {
-                  return LearningCard(
-                    continuelearning:
-                        dataController.data[userid].continueLearning[index],
-                  );
-                },
-              ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                left: 15,
-                right: 15,
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Text(
-                    'Popular Courses',
-                    style: kTitleTextStyle,
-                  ),
-                  Text(
-                    'See all',
-                    style: kSeeAllTextStyle,
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(
-              height: 6,
-            ),
-            SizedBox(
-              height: 240,
-              child: ListView.builder(
-                physics: const BouncingScrollPhysics(),
-                scrollDirection: Axis.horizontal,
-                itemCount: dataController.popularcourses.length,
-                itemBuilder: (context, index) {
-                  return PopularCoursesCard(
-                    title: dataController.popularcourses[index].title,
-                    image: dataController.popularcourses[index].image,
-                    courseName: dataController.popularcourses[index].courseName,
-                    totalRatings:
-                        dataController.popularcourses[index].totalRatings,
-                    starCount: dataController.popularcourses[index].starCount,
-                    totalLessons:
-                        dataController.popularcourses[index].totalLessons,
-                    courseImage:
-                        dataController.popularcourses[index].courseImage,
-                  );
-                },
-              ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                left: 15,
-                right: 15,
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Text(
-                    'Pending Tasks',
-                    style: kTitleTextStyle,
-                  ),
-                  Text(
-                    'See all',
-                    style: kSeeAllTextStyle,
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(
-              height: 6,
-            ),
-            SizedBox(
-              child: ListView.builder(
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                itemCount: dataController.data[userid].pendingTasks.length,
-                itemBuilder: (context, index) {
-                  return PendingTasksCard(
-                    image:
-                        dataController.data[userid].pendingTasks[index].image,
-                    subTitle: dataController
-                        .data[userid].pendingTasks[index].subTitle,
-                    title:
-                        dataController.data[userid].pendingTasks[index].title,
-                    date: dataController.data[userid].pendingTasks[index].date,
-                  );
-                },
-              ),
-            ),
-          ],
+          ),
         ),
       ),
-    ));
+    );
   }
 }

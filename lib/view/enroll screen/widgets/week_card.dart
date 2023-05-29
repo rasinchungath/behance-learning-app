@@ -8,7 +8,7 @@ class WeekCard extends StatefulWidget {
   @override
   State<WeekCard> createState() => _WeekCardState();
 }
- 
+
 class _WeekCardState extends State<WeekCard> {
   bool selected = false;
 
@@ -29,8 +29,7 @@ class _WeekCardState extends State<WeekCard> {
             width: 1.5,
             color: Colors.black87,
           ),
-          color: widget.index==0? Colors.black : null,
-          // selected ? Colors.black : null,
+          color: widget.index == 0 ? Colors.black : null,
         ),
         child: Padding(
           padding: const EdgeInsets.only(
@@ -44,8 +43,7 @@ class _WeekCardState extends State<WeekCard> {
             style: TextStyle(
               fontSize: 10,
               fontWeight: FontWeight.w600,
-              color: widget.index==0? Colors.white : null,
-              //selected ? Colors.white : null,
+              color: widget.index == 0 ? Colors.white : null,
             ),
           ),
         ),
