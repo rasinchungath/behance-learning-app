@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:online_learning/view/profile/profile.dart';
 import '../../../constants/constants.dart';
 import '../../../widgets/circular_icon_container.dart';
 import 'circular_container.dart';
@@ -21,7 +23,13 @@ AppBar customHomeAppbar() {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const CircularImageContainer(image: 'assets/images/profile.jpg'),
+            GestureDetector(
+              onTap: () {
+                Get.to(() => const Profile());
+              },
+              child: const CircularImageContainer(
+                  image: 'assets/images/profile.jpg'),
+            ),
             Row(
               children: [
                 CircularContainer(

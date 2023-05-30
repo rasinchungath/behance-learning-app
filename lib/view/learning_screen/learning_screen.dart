@@ -63,9 +63,9 @@ class LearningScreen extends StatelessWidget {
                 const SizedBox(
                   height: 15,
                 ),
-                const AboutCourseContainer(
+                AboutCourseContainer(
                   title: 'About this Course',
-                  description: text,
+                  description: continuelearning.courseDescription,
                 ),
                 const SizedBox(
                   height: 15,

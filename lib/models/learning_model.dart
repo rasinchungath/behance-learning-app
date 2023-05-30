@@ -10,6 +10,7 @@ class LearningModel {
     required this.ratings,
     required this.weeks,
     required this.topics,
+    required this.courseDescription
   });
   String subTitle;
   String title;
@@ -20,6 +21,7 @@ class LearningModel {
   String time;
   double ratings;
   int weeks;
+  String courseDescription;
   List<Topics> topics;
 }
 

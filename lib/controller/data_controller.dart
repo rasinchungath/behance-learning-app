@@ -21,6 +21,8 @@ class DataController extends GetxController {
           time: '80h:30min',
           ratings: 4.5,
           weeks: 5,
+          courseDescription:
+              '3D Art was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools. Artificial intelligence was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools',
           topics: [
             Topics(
               title: 'Introduction to Midjourney',
@@ -58,6 +60,8 @@ class DataController extends GetxController {
           time: '8h:30min',
           ratings: 5,
           weeks: 5,
+          courseDescription:
+              'Animation was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools. Artificial intelligence was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools',
           topics: [
             Topics(
               title: 'Introduction to Midjourney',
@@ -95,6 +99,8 @@ class DataController extends GetxController {
           time: '80h:30min',
           ratings: 3.0,
           weeks: 5,
+          courseDescription:
+              'Coding was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools. Artificial intelligence was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools',
           topics: [
             Topics(
               title: 'Introduction to Midjourney',
@@ -132,6 +138,8 @@ class DataController extends GetxController {
           time: '80h:30min',
           ratings: 4,
           weeks: 5,
+          courseDescription:
+              '3D Art was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools. Artificial intelligence was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools',
           topics: [
             Topics(
               title: 'Introduction to Midjourney',
@@ -202,6 +210,8 @@ class DataController extends GetxController {
           time: '80h:30min',
           ratings: 4,
           weeks: 5,
+          courseDescription:
+              'Artificial intelligence was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools. Artificial intelligence was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools',
           topics: [
             Topics(
               title: 'Introduction to Midjourney',
@@ -254,6 +264,8 @@ class DataController extends GetxController {
           time: '80h:30min',
           ratings: 4,
           weeks: 5,
+          courseDescription:
+              'Artificial intelligence was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools. Artificial intelligence was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools',
           topics: [
             Topics(
               title: 'Introduction to Midjourney',
@@ -306,6 +318,8 @@ class DataController extends GetxController {
           time: '80h:30min',
           ratings: 4,
           weeks: 5,
+          courseDescription:
+              'Artificial intelligence was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools. Artificial intelligence was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools',
           topics: [
             Topics(
               title: 'Introduction to Midjourney',
