@@ -20,33 +20,125 @@ class DataController extends GetxController {
           lessonsCount: 22,
           time: '80h:30min',
           ratings: 4.5,
-          weeks: 5,
+          weeks: 4,
           courseDescription:
               '3D Art was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools. Artificial intelligence was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools',
-          topics: [
-            Topics(
-              title: 'Introduction to Midjourney',
-              subTitle: 'Midjourney course introduction',
-              videoCount: 4,
-              time: '8h:30min',
+          weekTopics: [
+            Week(
+              week: 1,
+              topics: [
+                Topics(
+                  title: 'Introduction to Midjourney',
+                  subTitle: 'Midjourney course introduction',
+                  videoCount: 4,
+                  time: '8h:30min',
+                ),
+                Topics(
+                  title: 'Basics of 3D Art',
+                  subTitle: '3D Art introduction',
+                  videoCount: 10,
+                  time: '4h:20min',
+                ),
+                Topics(
+                  title: '3D Art and Illustration',
+                  subTitle: 'Course introduction',
+                  videoCount: 7,
+                  time: '1h:40min',
+                ),
+                Topics(
+                  title: 'About Midjourney',
+                  subTitle: 'Midjourney course introduction',
+                  videoCount: 6,
+                  time: '5h:30min',
+                ),
+              ],
             ),
-            Topics(
-              title: 'Basics of 3D Art',
-              subTitle: '3D Art introduction',
-              videoCount: 10,
-              time: '4h:20min',
+            Week(
+              week: 2,
+              topics: [
+                Topics(
+                  title: '3D Art and Illustration',
+                  subTitle: 'Midjourney course introduction',
+                  videoCount: 4,
+                  time: '8h:30min',
+                ),
+                Topics(
+                  title: 'Introduction to Midjourney',
+                  subTitle: '3D Art introduction',
+                  videoCount: 10,
+                  time: '4h:20min',
+                ),
+                Topics(
+                  title: 'Basics of 3D Art',
+                  subTitle: 'Course introduction',
+                  videoCount: 7,
+                  time: '1h:40min',
+                ),
+                Topics(
+                  title: 'Midjourney Courses',
+                  subTitle: 'Midjourney course introduction',
+                  videoCount: 6,
+                  time: '5h:30min',
+                ),
+              ],
             ),
-            Topics(
-              title: '3D Art and Illustration',
-              subTitle: 'Course introduction',
-              videoCount: 7,
-              time: '1h:40min',
+            Week(
+              week: 3,
+              topics: [
+                Topics(
+                  title: 'About Midjourney',
+                  subTitle: 'Midjourney course introduction',
+                  videoCount: 4,
+                  time: '8h:30min',
+                ),
+                Topics(
+                  title: 'Basics of 3D Art',
+                  subTitle: '3D Art introduction',
+                  videoCount: 10,
+                  time: '4h:20min',
+                ),
+                Topics(
+                  title: 'Introduction to Midjourney',
+                  subTitle: 'Course introduction',
+                  videoCount: 7,
+                  time: '1h:40min',
+                ),
+                Topics(
+                  title: '3D Art and Illustration',
+                  subTitle: 'Midjourney course introduction',
+                  videoCount: 6,
+                  time: '5h:30min',
+                ),
+              ],
             ),
-            Topics(
-              title: 'About Midjourney',
-              subTitle: 'Midjourney course introduction',
-              videoCount: 6,
-              time: '5h:30min',
+            Week(
+              week: 4,
+              topics: [
+                Topics(
+                  title: 'Illustration of 3D Art',
+                  subTitle: 'Midjourney course introduction',
+                  videoCount: 4,
+                  time: '8h:30min',
+                ),
+                Topics(
+                  title: '3D Art Basics',
+                  subTitle: '3D Art introduction',
+                  videoCount: 10,
+                  time: '4h:20min',
+                ),
+                Topics(
+                  title: 'Mobile app development',
+                  subTitle: 'Course introduction',
+                  videoCount: 7,
+                  time: '1h:40min',
+                ),
+                Topics(
+                  title: 'Software development',
+                  subTitle: 'Midjourney course introduction',
+                  videoCount: 6,
+                  time: '5h:30min',
+                ),
+              ],
             ),
           ],
         ),
@@ -59,33 +151,38 @@ class DataController extends GetxController {
           lessonsCount: 52,
           time: '8h:30min',
           ratings: 5,
-          weeks: 5,
+          weeks: 4,
           courseDescription:
               'Animation was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools. Artificial intelligence was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools',
-          topics: [
-            Topics(
-              title: 'Introduction to Midjourney',
-              subTitle: 'Midjourney course introduction',
-              videoCount: 4,
-              time: '8h:30min',
-            ),
-            Topics(
-              title: 'Basics of 3D Art',
-              subTitle: '3D Art introduction',
-              videoCount: 4,
-              time: '8h:30min',
-            ),
-            Topics(
-              title: '3D Art and Illustration',
-              subTitle: 'Course introduction',
-              videoCount: 4,
-              time: '8h:30min',
-            ),
-            Topics(
-              title: 'About Midjourney',
-              subTitle: 'Midjourney course introduction',
-              videoCount: 4,
-              time: '8h:30min',
+          weekTopics: [
+            Week(
+              week: 1,
+              topics: [
+                Topics(
+                  title: 'Introduction to Midjourney',
+                  subTitle: 'Midjourney course introduction',
+                  videoCount: 4,
+                  time: '8h:30min',
+                ),
+                Topics(
+                  title: 'Basics of 3D Art',
+                  subTitle: '3D Art introduction',
+                  videoCount: 10,
+                  time: '4h:20min',
+                ),
+                Topics(
+                  title: '3D Art and Illustration',
+                  subTitle: 'Course introduction',
+                  videoCount: 7,
+                  time: '1h:40min',
+                ),
+                Topics(
+                  title: 'About Midjourney',
+                  subTitle: 'Midjourney course introduction',
+                  videoCount: 6,
+                  time: '5h:30min',
+                ),
+              ],
             ),
           ],
         ),
@@ -98,33 +195,38 @@ class DataController extends GetxController {
           lessonsCount: 77,
           time: '80h:30min',
           ratings: 3.0,
-          weeks: 5,
+          weeks: 4,
           courseDescription:
               'Coding was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools. Artificial intelligence was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools',
-          topics: [
-            Topics(
-              title: 'Introduction to Midjourney',
-              subTitle: 'Midjourney course introduction',
-              videoCount: 4,
-              time: '8h:30min',
-            ),
-            Topics(
-              title: 'Basics of 3D Art',
-              subTitle: '3D Art introduction',
-              videoCount: 4,
-              time: '8h:30min',
-            ),
-            Topics(
-              title: '3D Art and Illustration',
-              subTitle: 'Course introduction',
-              videoCount: 4,
-              time: '8h:30min',
-            ),
-            Topics(
-              title: 'About Midjourney',
-              subTitle: 'Midjourney course introduction',
-              videoCount: 4,
-              time: '8h:30min',
+          weekTopics: [
+            Week(
+              week: 1,
+              topics: [
+                Topics(
+                  title: 'Introduction to Midjourney',
+                  subTitle: 'Midjourney course introduction',
+                  videoCount: 4,
+                  time: '8h:30min',
+                ),
+                Topics(
+                  title: 'Basics of 3D Art',
+                  subTitle: '3D Art introduction',
+                  videoCount: 10,
+                  time: '4h:20min',
+                ),
+                Topics(
+                  title: '3D Art and Illustration',
+                  subTitle: 'Course introduction',
+                  videoCount: 7,
+                  time: '1h:40min',
+                ),
+                Topics(
+                  title: 'About Midjourney',
+                  subTitle: 'Midjourney course introduction',
+                  videoCount: 6,
+                  time: '5h:30min',
+                ),
+              ],
             ),
           ],
         ),
@@ -137,33 +239,38 @@ class DataController extends GetxController {
           lessonsCount: 90,
           time: '80h:30min',
           ratings: 4,
-          weeks: 5,
+          weeks: 4,
           courseDescription:
               '3D Art was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools. Artificial intelligence was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools',
-          topics: [
-            Topics(
-              title: 'Introduction to Midjourney',
-              subTitle: 'Midjourney course introduction',
-              videoCount: 4,
-              time: '8h:30min',
-            ),
-            Topics(
-              title: 'Basics of 3D Art',
-              subTitle: '3D Art introduction',
-              videoCount: 4,
-              time: '8h:30min',
-            ),
-            Topics(
-              title: '3D Art and Illustration',
-              subTitle: 'Course introduction',
-              videoCount: 4,
-              time: '8h:30min',
-            ),
-            Topics(
-              title: 'About Midjourney',
-              subTitle: 'Midjourney course introduction',
-              videoCount: 4,
-              time: '8h:30min',
+          weekTopics: [
+            Week(
+              week: 1,
+              topics: [
+                Topics(
+                  title: 'Introduction to Midjourney',
+                  subTitle: 'Midjourney course introduction',
+                  videoCount: 4,
+                  time: '8h:30min',
+                ),
+                Topics(
+                  title: 'Basics of 3D Art',
+                  subTitle: '3D Art introduction',
+                  videoCount: 10,
+                  time: '4h:20min',
+                ),
+                Topics(
+                  title: '3D Art and Illustration',
+                  subTitle: 'Course introduction',
+                  videoCount: 7,
+                  time: '1h:40min',
+                ),
+                Topics(
+                  title: 'About Midjourney',
+                  subTitle: 'Midjourney course introduction',
+                  videoCount: 6,
+                  time: '5h:30min',
+                ),
+              ],
             ),
           ],
         ),
@@ -209,33 +316,38 @@ class DataController extends GetxController {
           lessonsCount: 90,
           time: '80h:30min',
           ratings: 4,
-          weeks: 5,
+          weeks: 4,
           courseDescription:
               'Artificial intelligence was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools. Artificial intelligence was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools',
-          topics: [
-            Topics(
-              title: 'Introduction to Midjourney',
-              subTitle: 'Midjourney course introduction',
-              videoCount: 4,
-              time: '8h:30min',
-            ),
-            Topics(
-              title: 'Basics of 3D Art',
-              subTitle: '3D Art introduction',
-              videoCount: 4,
-              time: '8h:30min',
-            ),
-            Topics(
-              title: '3D Art and Illustration',
-              subTitle: 'Course introduction',
-              videoCount: 4,
-              time: '8h:30min',
-            ),
-            Topics(
-              title: 'About Midjourney',
-              subTitle: 'Midjourney course introduction',
-              videoCount: 4,
-              time: '8h:30min',
+          weekTopics: [
+            Week(
+              week: 1,
+              topics: [
+                Topics(
+                  title: 'Introduction to Midjourney',
+                  subTitle: 'Midjourney course introduction',
+                  videoCount: 4,
+                  time: '8h:30min',
+                ),
+                Topics(
+                  title: 'Basics of 3D Art',
+                  subTitle: '3D Art introduction',
+                  videoCount: 10,
+                  time: '4h:20min',
+                ),
+                Topics(
+                  title: '3D Art and Illustration',
+                  subTitle: 'Course introduction',
+                  videoCount: 7,
+                  time: '1h:40min',
+                ),
+                Topics(
+                  title: 'About Midjourney',
+                  subTitle: 'Midjourney course introduction',
+                  videoCount: 6,
+                  time: '5h:30min',
+                ),
+              ],
             ),
           ],
         ),
@@ -263,33 +375,38 @@ class DataController extends GetxController {
           lessonsCount: 90,
           time: '80h:30min',
           ratings: 4,
-          weeks: 5,
+          weeks: 4,
           courseDescription:
               'Artificial intelligence was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools. Artificial intelligence was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools',
-          topics: [
-            Topics(
-              title: 'Introduction to Midjourney',
-              subTitle: 'Midjourney course introduction',
-              videoCount: 4,
-              time: '8h:30min',
-            ),
-            Topics(
-              title: 'Basics of 3D Art',
-              subTitle: '3D Art introduction',
-              videoCount: 4,
-              time: '8h:30min',
-            ),
-            Topics(
-              title: '3D Art and Illustration',
-              subTitle: 'Course introduction',
-              videoCount: 4,
-              time: '8h:30min',
-            ),
-            Topics(
-              title: 'About Midjourney',
-              subTitle: 'Midjourney course introduction',
-              videoCount: 4,
-              time: '8h:30min',
+          weekTopics: [
+            Week(
+              week: 1,
+              topics: [
+                Topics(
+                  title: 'Introduction to Midjourney',
+                  subTitle: 'Midjourney course introduction',
+                  videoCount: 4,
+                  time: '8h:30min',
+                ),
+                Topics(
+                  title: 'Basics of 3D Art',
+                  subTitle: '3D Art introduction',
+                  videoCount: 10,
+                  time: '4h:20min',
+                ),
+                Topics(
+                  title: '3D Art and Illustration',
+                  subTitle: 'Course introduction',
+                  videoCount: 7,
+                  time: '1h:40min',
+                ),
+                Topics(
+                  title: 'About Midjourney',
+                  subTitle: 'Midjourney course introduction',
+                  videoCount: 6,
+                  time: '5h:30min',
+                ),
+              ],
             ),
           ],
         ),
@@ -317,33 +434,38 @@ class DataController extends GetxController {
           lessonsCount: 90,
           time: '80h:30min',
           ratings: 4,
-          weeks: 5,
+          weeks: 4,
           courseDescription:
               'Artificial intelligence was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools. Artificial intelligence was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools',
-          topics: [
-            Topics(
-              title: 'Introduction to Midjourney',
-              subTitle: 'Midjourney course introduction',
-              videoCount: 4,
-              time: '8h:30min',
-            ),
-            Topics(
-              title: 'Basics of 3D Art',
-              subTitle: '3D Art introduction',
-              videoCount: 4,
-              time: '8h:30min',
-            ),
-            Topics(
-              title: '3D Art and Illustration',
-              subTitle: 'Course introduction',
-              videoCount: 4,
-              time: '8h:30min',
-            ),
-            Topics(
-              title: 'About Midjourney',
-              subTitle: 'Midjourney course introduction',
-              videoCount: 4,
-              time: '8h:30min',
+          weekTopics: [
+            Week(
+              week: 1,
+              topics: [
+                Topics(
+                  title: 'Introduction to Midjourney',
+                  subTitle: 'Midjourney course introduction',
+                  videoCount: 4,
+                  time: '8h:30min',
+                ),
+                Topics(
+                  title: 'Basics of 3D Art',
+                  subTitle: '3D Art introduction',
+                  videoCount: 10,
+                  time: '4h:20min',
+                ),
+                Topics(
+                  title: '3D Art and Illustration',
+                  subTitle: 'Course introduction',
+                  videoCount: 7,
+                  time: '1h:40min',
+                ),
+                Topics(
+                  title: 'About Midjourney',
+                  subTitle: 'Midjourney course introduction',
+                  videoCount: 6,
+                  time: '5h:30min',
+                ),
+              ],
             ),
           ],
         ),
@@ -370,7 +492,7 @@ class DataController extends GetxController {
       courseImage: 'assets/images/learning.png',
     ),
     PopularCourse(
-      title: 'Mobile App Developement',
+      title: 'Mobile App Development',
       image: 'assets/images/learning2.jpg',
       courseName: 'FLutter',
       totalRatings: '470',
@@ -379,7 +501,7 @@ class DataController extends GetxController {
       courseImage: 'assets/images/learning3.jpg',
     ),
     PopularCourse(
-      title: 'Web developement',
+      title: 'Web development',
       image: 'assets/images/learning3.jpg',
       courseName: 'Angular',
       totalRatings: '370',

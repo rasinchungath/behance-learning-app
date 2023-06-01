@@ -28,7 +28,7 @@ AppBar customAppbar({
             ),
             Text(
               title,
-              style:const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+              style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
             ),
             CircularContainer(
               icon: icon2,

@@ -14,10 +14,8 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Online Learning',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        scaffoldBackgroundColor: kBgColor,
-        fontFamily: 'Poppins'
-      ),
+      theme:
+          ThemeData(scaffoldBackgroundColor: kBgColor, fontFamily: 'Poppins'),
       home: HomeScreen(),
     );
   }

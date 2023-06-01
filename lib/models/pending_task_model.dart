@@ -4,13 +4,9 @@ class PendingTask {
     required this.subTitle,
     required this.title,
     required this.date,
-   
   });
   String title;
   String image;
   String subTitle;
   String date;
- 
 }
-
-

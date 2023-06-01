@@ -29,5 +29,3 @@ const TextStyle kRatingTextStyle = TextStyle(
   fontWeight: FontWeight.w600,
   color: Colors.black54,
 );
-
-

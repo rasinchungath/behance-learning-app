@@ -72,17 +72,20 @@ class LearningCard extends StatelessWidget {
                   ),
                 ),
               ),
-              Container(
-                margin: const EdgeInsets.all(8),
-                height: 130,
-                width: 120,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(continuelearning.image),
-                    fit: BoxFit.cover,
-                  ),
-                  borderRadius: BorderRadius.circular(
-                    20,
+              Hero(
+                tag: continuelearning.image,
+                child: Container(
+                  margin: const EdgeInsets.all(8),
+                  height: 130,
+                  width: 120,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(continuelearning.image),
+                      fit: BoxFit.cover,
+                    ),
+                    borderRadius: BorderRadius.circular(
+                      20,
+                    ),
                   ),
                 ),
               ),

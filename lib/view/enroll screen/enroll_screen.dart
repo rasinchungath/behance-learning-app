@@ -4,9 +4,8 @@ import 'package:online_learning/widgets/appbar.dart';
 import '../../constants/constants.dart';
 import '../../models/learning_model.dart';
 import '../../widgets/custom_button.dart';
-import 'widgets/courses_container.dart';
 import 'widgets/hour_rating_widgets.dart';
-import 'widgets/week_card.dart';
+import 'widgets/week_tab.dart';
 
 class EnrollScreen extends StatelessWidget {
   const EnrollScreen({
@@ -83,36 +82,38 @@ class EnrollScreen extends StatelessWidget {
               const SizedBox(
                 height: 15,
               ),
-              SizedBox(
-                height: 45,
-                child: ListView.builder(
-                  physics: const BouncingScrollPhysics(),
-                  scrollDirection: Axis.horizontal,
-                  itemCount: continuelearning.weeks,
-                  itemBuilder: (context, index) {
-                    return WeekCard(
-                      weeks: index,
-                      index: index,
-                    );
-                  },
-                ),
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              ListView.builder(
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                itemCount: 4,
-                itemBuilder: (context, index) {
-                  return CoursesContainer(
-                    title: continuelearning.topics[index].title,
-                    subTitle: continuelearning.topics[index].subTitle,
-                    videoCount: continuelearning.topics[index].videoCount,
-                    time: continuelearning.topics[index].time,
-                  );
-                },
-              ),
+              WeekTabScreen(continuelearning: continuelearning),
+
+              // SizedBox(
+              //   height: 45,
+              //   child: ListView.builder(
+              //     physics: const BouncingScrollPhysics(),
+              //     scrollDirection: Axis.horizontal,
+              //     itemCount: continuelearning.weeks,
+              //     itemBuilder: (context, index) {
+              //       return WeekCard(
+              //         weeks: index,
+              //         index: index,
+              //       );
+              //     },
+              //   ),
+              // ),
+              // const SizedBox(
+              //   height: 15,
+              // ),
+              // ListView.builder(
+              //   shrinkWrap: true,
+              //   physics: const NeverScrollableScrollPhysics(),
+              //   itemCount: 4,
+              //   itemBuilder: (context, index) {
+              //     return CoursesContainer(
+              //       title: continuelearning.topics[index].title,
+              //       subTitle: continuelearning.topics[index].subTitle,
+              //       videoCount: continuelearning.topics[index].videoCount,
+              //       time: continuelearning.topics[index].time,
+              //     );
+              //   },
+              // ),
             ],
           ),
         ),

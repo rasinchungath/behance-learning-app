@@ -4,14 +4,16 @@ import 'package:online_learning/view/learning_screen/widgets/about_course_contai
 import 'package:online_learning/widgets/appbar.dart';
 import 'package:online_learning/view/learning_screen/widgets/bottom_round_container.dart';
 import 'package:online_learning/view/learning_screen/widgets/rounded_container.dart';
-import '../../constants/constants.dart';
 import '../../models/learning_model.dart';
 import '../../widgets/custom_button.dart';
 import '../enroll screen/enroll_screen.dart';
 
 class LearningScreen extends StatelessWidget {
-  const LearningScreen({super.key, required this.continuelearning,});
-  final  LearningModel continuelearning;
+  const LearningScreen({
+    super.key,
+    required this.continuelearning,
+  });
+  final LearningModel continuelearning;
 
   @override
   Widget build(BuildContext context) {
@@ -42,23 +44,26 @@ class LearningScreen extends StatelessWidget {
                 const SizedBox(
                   height: 6,
                 ),
-                Container(
-                  height: 200,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage(continuelearning.image),
-                      fit: BoxFit.cover,
-                    ),
-                    borderRadius: BorderRadius.circular(
-                      20,
+                Hero(
+                  tag: continuelearning.image,
+                  child: Container(
+                    height: 200,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(continuelearning.image),
+                        fit: BoxFit.cover,
+                      ),
+                      borderRadius: BorderRadius.circular(
+                        20,
+                      ),
                     ),
                   ),
                 ),
                 const SizedBox(height: 8),
-                 RoundedContainer(
+                RoundedContainer(
                   image: continuelearning.image2,
-                  text:continuelearning.subTitle,
+                  text: continuelearning.subTitle,
                 ),
                 const SizedBox(
                   height: 15,
@@ -74,11 +79,17 @@ class LearningScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     BottomRoundContainer(
-                        icon: Icons.auto_stories_outlined, text: '${continuelearning.lessonsCount} Lessons',),
+                      icon: Icons.auto_stories_outlined,
+                      text: '${continuelearning.lessonsCount} Lessons',
+                    ),
                     BottomRoundContainer(
-                        icon: Icons.access_time, text: continuelearning.time,),
+                      icon: Icons.access_time,
+                      text: continuelearning.time,
+                    ),
                     BottomRoundContainer(
-                        icon: Icons.star_border_outlined, text: '${continuelearning.ratings} Ratings',),
+                      icon: Icons.star_border_outlined,
+                      text: '${continuelearning.ratings} Ratings',
+                    ),
                   ],
                 ),
               ],

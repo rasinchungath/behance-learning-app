@@ -11,14 +11,10 @@ const TextStyle kNameTextStyle = TextStyle(
   fontWeight: FontWeight.bold,
 );
 
-
-
 const TextStyle kSeeAllTextStyle = TextStyle(
   fontSize: 10,
   fontWeight: FontWeight.bold,
 );
-
-
 
 const TextStyle kPopularCardBottomTextStyle = TextStyle(
   fontSize: 8,

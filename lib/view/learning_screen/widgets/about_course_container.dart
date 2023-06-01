@@ -3,7 +3,8 @@ import '../../../constants/constants.dart';
 import 'read_more.dart';
 
 class AboutCourseContainer extends StatelessWidget {
-  const AboutCourseContainer({super.key, required this.title, required this.description});
+  const AboutCourseContainer(
+      {super.key, required this.title, required this.description});
   final String title;
   final String description;
 
@@ -17,12 +18,14 @@ class AboutCourseContainer extends StatelessWidget {
             const EdgeInsets.only(left: 10, right: 10, top: 15, bottom: 15),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children:  [
+          children: [
             Text(
               title,
               style: kCardTitleTextStyle,
             ),
-            DescriptionTextWidget(text: description,),
+            DescriptionTextWidget(
+              text: description,
+            ),
           ],
         ),
       ),

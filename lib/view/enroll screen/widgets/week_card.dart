@@ -1,49 +1,57 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import '../../../controller/week_tab_controller.dart';
 
-class WeekCard extends StatefulWidget {
-  const WeekCard({super.key, required this.weeks, required this.index});
-  final int weeks;
-  final int index;
+class WeekCard extends StatelessWidget {
+  WeekCard({
+    super.key,
+    required this.index,
+  });
 
-  @override
-  State<WeekCard> createState() => _WeekCardState();
-}
+  int index;
 
-class _WeekCardState extends State<WeekCard> {
-  bool selected = false;
+  final WeekTabController _controller = Get.find();
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        setState(() {
-          selected = !selected;
-        });
+        _controller.changeTabIndex(index);
       },
-      child: Container(
-        margin: const EdgeInsets.only(left: 10),
-        height: 45,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(30),
-          border: Border.all(
-            width: 1.5,
-            color: Colors.black87,
+      child: Obx(
+        () => Container(
+          margin: const EdgeInsets.only(
+            left: 15,
           ),
-          color: widget.index == 0 ? Colors.black : null,
-        ),
-        child: Padding(
-          padding: const EdgeInsets.only(
-            left: 25,
-            right: 25,
-            bottom: 10,
-            top: 10,
+          height: 45,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(30),
+            border: Border.all(
+              width: 1.5,
+              color: Colors.black87,
+            ),
+            color: _controller.currentIndex.value == index
+                ? Colors.black
+                : Colors.white,
           ),
-          child: Text(
-            'WEEK ${widget.weeks + 1}',
-            style: TextStyle(
-              fontSize: 10,
-              fontWeight: FontWeight.w600,
-              color: widget.index == 0 ? Colors.white : null,
+          child: Padding(
+            padding: const EdgeInsets.only(
+              left: 25,
+              right: 25,
+              bottom: 10,
+              top: 10,
+            ),
+            child: Obx(
+              () => Text(
+                'WEEK ${index + 1}',
+                style: TextStyle(
+                  fontSize: 10,
+                  fontWeight: FontWeight.w600,
+                  color: _controller.currentIndex.value == index
+                      ? Colors.white
+                      : Colors.black,
+                ),
+              ),
             ),
           ),
         ),
