@@ -2,10 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:online_learning/view/profile/profile.dart';
 import '../../../constants/constants.dart';
+import '../../../controller/search_controller.dart';
 import '../../../widgets/circular_icon_container.dart';
+import '../../../widgets/custom_textfield.dart';
 import 'circular_container.dart';
 
 AppBar customHomeAppbar() {
+  final _searchController = Get.put(SearchController());
+  TextEditingController _textController = new TextEditingController();
+
   return AppBar(
     elevation: 0,
     shadowColor: null,
@@ -32,9 +37,21 @@ AppBar customHomeAppbar() {
             ),
             Row(
               children: [
+                _searchController.isSearching.value
+                    ? CustomTextField(
+                        hintText: 'search',
+                        controller: _textController,
+                        keyboardType: TextInputType.name,
+                      )
+                    : const Text(''),
+                    const SizedBox(
+                  width: 5,
+                ),
                 CircularContainer(
                   icon: Icons.search_outlined,
-                  onPressed: () {},
+                  onPressed: () {
+                    _searchController.toggleFlag();
+                  },
                 ),
                 const SizedBox(
                   width: 5,

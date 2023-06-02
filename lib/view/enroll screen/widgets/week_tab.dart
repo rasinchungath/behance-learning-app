@@ -11,47 +11,6 @@ class WeekTabScreen extends StatelessWidget {
 
   final _controller = Get.put(WeekTabController());
 
-  final List<Widget> _screens = [
-    ListView.builder(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      itemCount: 5,
-      itemBuilder: (context, index) {
-        return CoursesContainer(
-          title: 'Introduction to Midjourney',
-          subTitle: 'Midjourney course introduction',
-          videoCount: 7,
-          time: '8h:40min',
-        );
-      },
-    ),
-    CoursesContainer(
-      title: '3D Art and Illustration',
-      subTitle: 'continuelearning',
-      videoCount: 7,
-      time: '8h:40min',
-    ),
-    ListView.builder(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      itemCount: 2,
-      itemBuilder: (context, index) {
-        return CoursesContainer(
-          title: 'Introduction to Midjourney',
-          subTitle: 'Midjourney course introduction',
-          videoCount: 7,
-          time: '8h:30min',
-        );
-      },
-    ),
-    CoursesContainer(
-      title: '3D Art and Illustration',
-      subTitle: 'Course introduction',
-      videoCount: 7,
-      time: '8h:40min',
-    ),
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Column(

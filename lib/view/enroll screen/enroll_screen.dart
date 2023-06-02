@@ -83,37 +83,6 @@ class EnrollScreen extends StatelessWidget {
                 height: 15,
               ),
               WeekTabScreen(continuelearning: continuelearning),
-
-              // SizedBox(
-              //   height: 45,
-              //   child: ListView.builder(
-              //     physics: const BouncingScrollPhysics(),
-              //     scrollDirection: Axis.horizontal,
-              //     itemCount: continuelearning.weeks,
-              //     itemBuilder: (context, index) {
-              //       return WeekCard(
-              //         weeks: index,
-              //         index: index,
-              //       );
-              //     },
-              //   ),
-              // ),
-              // const SizedBox(
-              //   height: 15,
-              // ),
-              // ListView.builder(
-              //   shrinkWrap: true,
-              //   physics: const NeverScrollableScrollPhysics(),
-              //   itemCount: 4,
-              //   itemBuilder: (context, index) {
-              //     return CoursesContainer(
-              //       title: continuelearning.topics[index].title,
-              //       subTitle: continuelearning.topics[index].subTitle,
-              //       videoCount: continuelearning.topics[index].videoCount,
-              //       time: continuelearning.topics[index].time,
-              //     );
-              //   },
-              // ),
             ],
           ),
         ),

@@ -52,33 +52,33 @@ class DataController extends GetxController {
                   time: '5h:30min',
                 ),
               ],
-            ),
+            ), 
             Week(
               week: 2,
               topics: [
                 Topics(
                   title: '3D Art and Illustration',
                   subTitle: 'Midjourney course introduction',
-                  videoCount: 4,
-                  time: '8h:30min',
+                  videoCount: 1,
+                  time: '3h:30min',
                 ),
                 Topics(
                   title: 'Introduction to Midjourney',
                   subTitle: '3D Art introduction',
-                  videoCount: 10,
-                  time: '4h:20min',
+                  videoCount: 20,
+                  time: '1h:20min',
                 ),
                 Topics(
                   title: 'Basics of 3D Art',
                   subTitle: 'Course introduction',
-                  videoCount: 7,
-                  time: '1h:40min',
+                  videoCount: 67,
+                  time: '3h:40min',
                 ),
                 Topics(
                   title: 'Midjourney Courses',
                   subTitle: 'Midjourney course introduction',
-                  videoCount: 6,
-                  time: '5h:30min',
+                  videoCount: 7,
+                  time: '7h:30min',
                 ),
               ],
             ),
@@ -88,26 +88,26 @@ class DataController extends GetxController {
                 Topics(
                   title: 'About Midjourney',
                   subTitle: 'Midjourney course introduction',
-                  videoCount: 4,
-                  time: '8h:30min',
+                  videoCount: 14,
+                  time: '1h:30min',
                 ),
                 Topics(
                   title: 'Basics of 3D Art',
                   subTitle: '3D Art introduction',
-                  videoCount: 10,
-                  time: '4h:20min',
+                  videoCount: 80,
+                  time: '3h:20min',
                 ),
                 Topics(
                   title: 'Introduction to Midjourney',
                   subTitle: 'Course introduction',
-                  videoCount: 7,
-                  time: '1h:40min',
+                  videoCount: 71,
+                  time: '2h:40min',
                 ),
                 Topics(
                   title: '3D Art and Illustration',
                   subTitle: 'Midjourney course introduction',
-                  videoCount: 6,
-                  time: '5h:30min',
+                  videoCount: 84,
+                  time: '12h:30min',
                 ),
               ],
             ),
@@ -117,26 +117,26 @@ class DataController extends GetxController {
                 Topics(
                   title: 'Illustration of 3D Art',
                   subTitle: 'Midjourney course introduction',
-                  videoCount: 4,
-                  time: '8h:30min',
+                  videoCount: 34,
+                  time: '1h:30min',
                 ),
                 Topics(
                   title: '3D Art Basics',
                   subTitle: '3D Art introduction',
-                  videoCount: 10,
-                  time: '4h:20min',
+                  videoCount: 8,
+                  time: '2h:20min',
                 ),
                 Topics(
                   title: 'Mobile app development',
                   subTitle: 'Course introduction',
-                  videoCount: 7,
-                  time: '1h:40min',
+                  videoCount: 27,
+                  time: '4h:40min',
                 ),
                 Topics(
                   title: 'Software development',
                   subTitle: 'Midjourney course introduction',
-                  videoCount: 6,
-                  time: '5h:30min',
+                  videoCount:5,
+                  time: '6h:20min',
                 ),
               ],
             ),
@@ -151,7 +151,7 @@ class DataController extends GetxController {
           lessonsCount: 52,
           time: '8h:30min',
           ratings: 5,
-          weeks: 4,
+          weeks: 1,
           courseDescription:
               'Animation was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools. Artificial intelligence was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools',
           weekTopics: [
@@ -195,7 +195,7 @@ class DataController extends GetxController {
           lessonsCount: 77,
           time: '80h:30min',
           ratings: 3.0,
-          weeks: 4,
+          weeks: 1,
           courseDescription:
               'Coding was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools. Artificial intelligence was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools',
           weekTopics: [
@@ -239,7 +239,7 @@ class DataController extends GetxController {
           lessonsCount: 90,
           time: '80h:30min',
           ratings: 4,
-          weeks: 4,
+          weeks: 1,
           courseDescription:
               '3D Art was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools. Artificial intelligence was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools',
           weekTopics: [
@@ -316,7 +316,7 @@ class DataController extends GetxController {
           lessonsCount: 90,
           time: '80h:30min',
           ratings: 4,
-          weeks: 4,
+          weeks: 1,
           courseDescription:
               'Artificial intelligence was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools. Artificial intelligence was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools',
           weekTopics: [
@@ -375,7 +375,7 @@ class DataController extends GetxController {
           lessonsCount: 90,
           time: '80h:30min',
           ratings: 4,
-          weeks: 4,
+          weeks: 1,
           courseDescription:
               'Artificial intelligence was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools. Artificial intelligence was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools',
           weekTopics: [
@@ -434,7 +434,7 @@ class DataController extends GetxController {
           lessonsCount: 90,
           time: '80h:30min',
           ratings: 4,
-          weeks: 4,
+          weeks: 1,
           courseDescription:
               'Artificial intelligence was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools. Artificial intelligence was founded as an academic discipline in 1956, and in the years since it has experienced several waves of optimism  various sub-fields of AI research are centered around particular goals and the use of particular tools',
           weekTopics: [

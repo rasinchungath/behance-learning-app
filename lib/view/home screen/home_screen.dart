@@ -7,6 +7,7 @@ import '../../widgets/appbar.dart';
 import '../messages/messages.dart';
 import '../downloads/downloads.dart';
 import '../settings/settings.dart';
+import 'widgets/bottom_bar_container.dart';
 import 'widgets/home.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -60,34 +61,54 @@ class HomeScreen extends StatelessWidget {
           extendBody: true,
           body: _screens[_controller.currentIndex.value],
           bottomNavigationBar: Padding(
-            padding: const EdgeInsets.only(bottom: 10, right: 25, left: 25),
+            padding: const EdgeInsets.only(bottom: 10, right: 30, left: 30),
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(32),
+              borderRadius: BorderRadius.circular(35),
               child: SizedBox(
-                height: 65,
+                height: 68,
                 child: BottomNavigationBar(
+                  selectedLabelStyle: const TextStyle(
+                    fontSize: 0,
+                  ),
+                  unselectedLabelStyle: const TextStyle(
+                    fontSize: 0,
+                  ),
+                  showSelectedLabels: false,
+                  showUnselectedLabels: false,
                   backgroundColor: Colors.black,
                   selectedItemColor: kprimaryColor,
-                  iconSize: 20,
+                  iconSize: 22,
                   currentIndex: _controller.currentIndex.value,
                   onTap: (index) => _controller.changeTabIndex(index),
-                  items: const [
+                  items: [
                     BottomNavigationBarItem(
-                      icon: Icon(Icons.home),
-                      label: 'Home',
+                      icon: _controller.currentIndex.value == 0
+                          ? const BottomBarContainer(
+                              icon: Icons.home, title: 'Home')
+                          : const Icon(Icons.home),
+                      label: '',
                       backgroundColor: Colors.black,
                     ),
                     BottomNavigationBarItem(
-                      icon: Icon(Icons.message),
-                      label: 'Messages',
+                      icon: _controller.currentIndex.value == 1
+                          ? const BottomBarContainer(
+                              icon: Icons.message, title: 'Messages')
+                          : const Icon(Icons.message),
+                      label: '',
                     ),
                     BottomNavigationBarItem(
-                      icon: Icon(Icons.download),
-                      label: 'Downloads',
+                      icon: _controller.currentIndex.value == 2
+                          ? const BottomBarContainer(
+                              icon: Icons.download, title: 'Downloads')
+                          : const Icon(Icons.download),
+                      label: '',
                     ),
                     BottomNavigationBarItem(
-                      icon: Icon(Icons.settings),
-                      label: 'Settings',
+                      icon: _controller.currentIndex.value == 3
+                          ? const BottomBarContainer(
+                              icon: Icons.settings, title: 'Settings')
+                          : const Icon(Icons.settings),
+                      label: '',
                     ),
                   ],
                 ),
