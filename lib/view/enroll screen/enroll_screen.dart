@@ -13,7 +13,6 @@ class EnrollScreen extends StatelessWidget {
     required this.continuelearning,
   });
   final LearningModel continuelearning;
-  
 
   @override
   Widget build(BuildContext context) {

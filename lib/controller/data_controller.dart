@@ -52,7 +52,7 @@ class DataController extends GetxController {
                   time: '5h:30min',
                 ),
               ],
-            ), 
+            ),
             Week(
               week: 2,
               topics: [
@@ -135,7 +135,7 @@ class DataController extends GetxController {
                 Topics(
                   title: 'Software development',
                   subTitle: 'Midjourney course introduction',
-                  videoCount:5,
+                  videoCount: 5,
                   time: '6h:20min',
                 ),
               ],

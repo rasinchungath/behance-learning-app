@@ -4,8 +4,7 @@ import '../../../constants/constants.dart';
 import '../../../controller/theme_controller.dart';
 
 class BottomBarContainer extends StatelessWidget {
-   BottomBarContainer(
-      {super.key, required this.icon, required this.title});
+  BottomBarContainer({super.key, required this.icon, required this.title});
   final IconData icon;
   final String title;
 
@@ -18,7 +17,7 @@ class BottomBarContainer extends StatelessWidget {
       height: 50,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(35),
-        color:_themeController.isDarkMode.value?Colors.black:kprimaryColor,
+        color: _themeController.isDarkMode.value ? Colors.black : kprimaryColor,
       ),
       child: Padding(
         padding: const EdgeInsets.all(5.0),
@@ -26,7 +25,9 @@ class BottomBarContainer extends StatelessWidget {
           children: [
             Icon(
               icon,
-              color: _themeController.isDarkMode.value?Colors.white:Colors.black,
+              color: _themeController.isDarkMode.value
+                  ? Colors.white
+                  : Colors.black,
               size: 22,
             ),
             const SizedBox(

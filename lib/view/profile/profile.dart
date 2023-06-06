@@ -21,6 +21,7 @@ class Profile extends StatelessWidget {
             Get.back();
           },
           onPressedIcon2: () {},
+          
         ),
         body: Column(
           children: [

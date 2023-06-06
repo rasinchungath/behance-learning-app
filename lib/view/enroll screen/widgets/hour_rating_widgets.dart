@@ -20,48 +20,52 @@ class HourRatingWidgets extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Obx(() => Row(
-      children: [
-        Icon(
-          icon1,
-          size: 18,
-        ),
-        const SizedBox(
-          width: 4,
-        ),
-        Text(
-          text1,
-          style: TextStyle(
-            fontSize: 8,
-            fontWeight: FontWeight.w600,
-            color: themeController.isDarkMode.value
-                ? Colors.white
-                : Colors.black54,
+    return Obx(
+      () => Row(
+        children: [
+          Icon(
+            icon1,
+            size: 18,
           ),
-        ),
-        const SizedBox(
-          width: 8,
-        ),
-        Icon(
-          icon2,
-          size: 18,
-          color: color ??
-              (themeController.isDarkMode.value ? Colors.white : Colors.black),
-        ),
-        const SizedBox(
-          width: 4,
-        ),
-        Text(
-          text2,
-          style: TextStyle(
-            fontSize: 8,
-            fontWeight: FontWeight.w600,
-            color: themeController.isDarkMode.value
-                ? Colors.white
-                : Colors.black54,
+          const SizedBox(
+            width: 4,
           ),
-        ),
-      ],
-    ),);
+          Text(
+            text1,
+            style: TextStyle(
+              fontSize: 8,
+              fontWeight: FontWeight.w600,
+              color: themeController.isDarkMode.value
+                  ? Colors.white
+                  : Colors.black54,
+            ),
+          ),
+          const SizedBox(
+            width: 8,
+          ),
+          Icon(
+            icon2,
+            size: 18,
+            color: color ??
+                (themeController.isDarkMode.value
+                    ? Colors.white
+                    : Colors.black),
+          ),
+          const SizedBox(
+            width: 4,
+          ),
+          Text(
+            text2,
+            style: TextStyle(
+              fontSize: 8,
+              fontWeight: FontWeight.w600,
+              color: themeController.isDarkMode.value
+                  ? Colors.white
+                  : Colors.black54,
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }

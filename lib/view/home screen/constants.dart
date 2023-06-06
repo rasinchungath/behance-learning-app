@@ -16,11 +16,16 @@ TextStyle kNameTextStyle = const TextStyle(
   fontWeight: FontWeight.bold,
 );
 
- Widget seeAlltext = Obx(() => Text('See all', style: TextStyle(
-  fontSize: 10,
-  fontWeight: FontWeight.bold,
-  color: themeController.isDarkMode.value ? kprimaryColor : Colors.black,
-),),);
+Widget seeAlltext = Obx(
+  () => Text(
+    'See all',
+    style: TextStyle(
+      fontSize: 10,
+      fontWeight: FontWeight.bold,
+      color: themeController.isDarkMode.value ? kprimaryColor : Colors.black,
+    ),
+  ),
+);
 
 TextStyle kSeeAllTextStyle = TextStyle(
   fontSize: 10,
@@ -31,5 +36,5 @@ TextStyle kSeeAllTextStyle = TextStyle(
 TextStyle kPopularCardBottomTextStyle = TextStyle(
   fontSize: 8,
   fontWeight: FontWeight.bold,
-  color: themeController.isDarkMode.value ? Colors.white :Colors.black54,
+  color: themeController.isDarkMode.value ? Colors.white : Colors.black54,
 );

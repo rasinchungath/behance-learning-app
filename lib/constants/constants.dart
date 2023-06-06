@@ -15,8 +15,6 @@ Border border = Border.all(
       _themeController.isDarkMode.value ? Colors.white38 : Colors.grey.shade200,
 );
 
-
-
 const kprimaryColor = Color.fromARGB(255, 209, 248, 101);
 const kstarColor = Color.fromARGB(255, 243, 219, 1);
 const appBarHeight = 80.0;

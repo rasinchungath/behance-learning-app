@@ -40,8 +40,9 @@ class BottomRoundContainer extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 8,
                   fontWeight: FontWeight.w600,
-                  color:themeController.isDarkMode.value
-                ? Colors.white: Colors.black54,
+                  color: themeController.isDarkMode.value
+                      ? Colors.white
+                      : Colors.black54,
                 ),
               )
             ],
