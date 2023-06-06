@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../../../constants/constants.dart';
+import '../../../controller/theme_controller.dart';
 
 class BottomBarContainer extends StatelessWidget {
-  const BottomBarContainer(
+   BottomBarContainer(
       {super.key, required this.icon, required this.title});
   final IconData icon;
   final String title;
+
+  final ThemeController _themeController = Get.find();
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +18,7 @@ class BottomBarContainer extends StatelessWidget {
       height: 50,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(35),
-        color: kprimaryColor,
+        color:_themeController.isDarkMode.value?Colors.black:kprimaryColor,
       ),
       child: Padding(
         padding: const EdgeInsets.all(5.0),
@@ -22,7 +26,7 @@ class BottomBarContainer extends StatelessWidget {
           children: [
             Icon(
               icon,
-              color: Colors.black,
+              color: _themeController.isDarkMode.value?Colors.white:Colors.black,
               size: 22,
             ),
             const SizedBox(

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:online_learning/controller/theme_controller.dart';
 import '../constants/constants.dart';
 import 'circular_icon_container.dart';
 
@@ -9,10 +11,11 @@ AppBar customAppbar({
   required VoidCallback onPressedIcon1,
   required VoidCallback onPressedIcon2,
 }) {
+  final ThemeController themeController = Get.find();  
   return AppBar(
     elevation: 0,
     shadowColor: null,
-    backgroundColor: Colors.white,
+    backgroundColor:themeController.isDarkMode.value? Colors.black: Colors.white, 
     automaticallyImplyLeading: false,
     toolbarHeight: appBarHeight,
     flexibleSpace: SizedBox(

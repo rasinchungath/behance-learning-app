@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:online_learning/controller/theme_controller.dart';
+import '../../constants/constants.dart';
+
+final ThemeController themeController = Get.find();
 
 const TextStyle kGreetingTextStyle = TextStyle(
   fontSize: 10,
@@ -6,18 +11,25 @@ const TextStyle kGreetingTextStyle = TextStyle(
   color: Colors.grey,
 );
 
-const TextStyle kNameTextStyle = TextStyle(
+TextStyle kNameTextStyle = const TextStyle(
   fontSize: 13,
   fontWeight: FontWeight.bold,
 );
 
-const TextStyle kSeeAllTextStyle = TextStyle(
+ Widget seeAlltext = Obx(() => Text('See all', style: TextStyle(
   fontSize: 10,
   fontWeight: FontWeight.bold,
+  color: themeController.isDarkMode.value ? kprimaryColor : Colors.black,
+),),);
+
+TextStyle kSeeAllTextStyle = TextStyle(
+  fontSize: 10,
+  fontWeight: FontWeight.bold,
+  color: themeController.isDarkMode.value ? kprimaryColor : Colors.black,
 );
 
-const TextStyle kPopularCardBottomTextStyle = TextStyle(
+TextStyle kPopularCardBottomTextStyle = TextStyle(
   fontSize: 8,
   fontWeight: FontWeight.bold,
-  color: Colors.black54,
+  color: themeController.isDarkMode.value ? Colors.white :Colors.black54,
 );

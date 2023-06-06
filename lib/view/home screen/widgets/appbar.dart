@@ -3,18 +3,21 @@ import 'package:get/get.dart';
 import 'package:online_learning/view/profile/profile.dart';
 import '../../../constants/constants.dart';
 import '../../../controller/search_controller.dart';
+import '../../../controller/theme_controller.dart';
 import '../../../widgets/circular_icon_container.dart';
 import '../../../widgets/custom_textfield.dart';
 import 'circular_container.dart';
 
 AppBar customHomeAppbar() {
-  final _searchController = Get.put(SearchController());
-  TextEditingController _textController = new TextEditingController();
+  final searchController = Get.put(SearchController());
+  TextEditingController textController = TextEditingController();
+  final ThemeController themeController = Get.find();
 
   return AppBar(
     elevation: 0,
     shadowColor: null,
-    backgroundColor: Colors.white,
+    backgroundColor:
+        themeController.isDarkMode.value ? Colors.black : Colors.white,
     automaticallyImplyLeading: false,
     toolbarHeight: appBarHeight,
     flexibleSpace: SizedBox(
@@ -30,27 +33,27 @@ AppBar customHomeAppbar() {
           children: [
             GestureDetector(
               onTap: () {
-                Get.to(() => const Profile());
+                Get.to(() => Profile());
               },
               child: const CircularImageContainer(
                   image: 'assets/images/profile.jpg'),
             ),
             Row(
               children: [
-                _searchController.isSearching.value
+                searchController.isSearching.value
                     ? CustomTextField(
                         hintText: 'search',
-                        controller: _textController,
+                        controller: textController,
                         keyboardType: TextInputType.name,
                       )
                     : const Text(''),
-                    const SizedBox(
+                const SizedBox(
                   width: 5,
                 ),
                 CircularContainer(
                   icon: Icons.search_outlined,
                   onPressed: () {
-                    _searchController.toggleFlag();
+                    searchController.toggleFlag();
                   },
                 ),
                 const SizedBox(

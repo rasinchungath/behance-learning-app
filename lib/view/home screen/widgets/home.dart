@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../constants/constants.dart';
 import '../../../controller/data_controller.dart';
+import '../../../controller/theme_controller.dart';
 import '../constants.dart';
 import 'learning_card.dart';
 import 'pending_tasks_card.dart';
@@ -11,6 +12,7 @@ class Home extends StatelessWidget {
   Home({super.key});
   final dataController = Get.put(DataController());
   int userid = 0;
+  final ThemeController themeController = Get.find();
 
   @override
   Widget build(BuildContext context) {
@@ -92,15 +94,12 @@ class Home extends StatelessWidget {
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
-                Text(
+              children: [
+                const Text(
                   'Popular Courses',
                   style: kTitleTextStyle,
                 ),
-                Text(
-                  'See all',
-                  style: kSeeAllTextStyle,
-                ),
+                seeAlltext,
               ],
             ),
           ),
@@ -138,15 +137,12 @@ class Home extends StatelessWidget {
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
-                Text(
+              children: [
+                const Text(
                   'Pending Tasks',
                   style: kTitleTextStyle,
                 ),
-                Text(
-                  'See all',
-                  style: kSeeAllTextStyle,
-                ),
+                seeAlltext,
               ],
             ),
           ),

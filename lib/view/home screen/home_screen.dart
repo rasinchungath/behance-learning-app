@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:online_learning/view/home%20screen/widgets/appbar.dart';
 import '../../constants/constants.dart';
 import '../../controller/bottom_navigation_controller.dart';
+import '../../controller/theme_controller.dart';
 import '../../widgets/appbar.dart';
 import '../messages/messages.dart';
 import '../downloads/downloads.dart';
@@ -14,6 +15,7 @@ class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
 
   final _controller = Get.put(BottomNavigationController());
+  final ThemeController _themeController = Get.put(ThemeController());
 
   final List<Widget> _screens = [
     Home(),
@@ -75,37 +77,41 @@ class HomeScreen extends StatelessWidget {
                   ),
                   showSelectedLabels: false,
                   showUnselectedLabels: false,
-                  backgroundColor: Colors.black,
-                  selectedItemColor: kprimaryColor,
+                  unselectedIconTheme: IconThemeData(
+                    color: _themeController.isDarkMode.value
+                        ? Colors.grey.shade500
+                        : Colors.white,
+                  ),
                   iconSize: 22,
                   currentIndex: _controller.currentIndex.value,
                   onTap: (index) => _controller.changeTabIndex(index),
                   items: [
                     BottomNavigationBarItem(
                       icon: _controller.currentIndex.value == 0
-                          ? const BottomBarContainer(
-                              icon: Icons.home, title: 'Home')
+                          ? BottomBarContainer(icon: Icons.home, title: 'Home')
                           : const Icon(Icons.home),
                       label: '',
-                      backgroundColor: Colors.black,
+                      backgroundColor: _themeController.isDarkMode.value
+                          ? kprimaryColor
+                          : Colors.black,
                     ),
                     BottomNavigationBarItem(
                       icon: _controller.currentIndex.value == 1
-                          ? const BottomBarContainer(
+                          ? BottomBarContainer(
                               icon: Icons.message, title: 'Messages')
                           : const Icon(Icons.message),
                       label: '',
                     ),
                     BottomNavigationBarItem(
                       icon: _controller.currentIndex.value == 2
-                          ? const BottomBarContainer(
+                          ? BottomBarContainer(
                               icon: Icons.download, title: 'Downloads')
                           : const Icon(Icons.download),
                       label: '',
                     ),
                     BottomNavigationBarItem(
                       icon: _controller.currentIndex.value == 3
-                          ? const BottomBarContainer(
+                          ? BottomBarContainer(
                               icon: Icons.settings, title: 'Settings')
                           : const Icon(Icons.settings),
                       label: '',

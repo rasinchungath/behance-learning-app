@@ -96,18 +96,21 @@ class LearningScreen extends StatelessWidget {
             ),
           ),
         ),
-        bottomNavigationBar: BottomAppBar(
-          elevation: 0,
-          child: Padding(
-            padding: const EdgeInsets.only(left: 15, right: 15, bottom: 10),
-            child: CustomButton(
-              label: 'Enroll for free',
-              onpressed: () {
-                Get.to(
-                  () => EnrollScreen(continuelearning: continuelearning),
-                );
-              },
-            ),
+        bottomNavigationBar:Padding(
+          padding: const EdgeInsets.only(left: 15, right: 15, bottom: 10),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(30),
+            child: BottomAppBar(
+                elevation: 0,
+                child: CustomButton(
+                  label: 'Enroll for free',
+                  onpressed: () {
+                    Get.to(
+                      () => EnrollScreen(continuelearning: continuelearning),
+                    );
+                  },
+                ),
+              ),
           ),
         ),
       ),

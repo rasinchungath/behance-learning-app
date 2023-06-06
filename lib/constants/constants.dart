@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import '../controller/theme_controller.dart';
+
+final ThemeController _themeController = Get.find();
 
 BoxDecoration containerDecoration = BoxDecoration(
   borderRadius: BorderRadius.circular(22),
@@ -7,8 +11,11 @@ BoxDecoration containerDecoration = BoxDecoration(
 
 Border border = Border.all(
   width: 1.5,
-  color: Colors.grey.shade200,
+  color:
+      _themeController.isDarkMode.value ? Colors.white38 : Colors.grey.shade200,
 );
+
+
 
 const kprimaryColor = Color.fromARGB(255, 209, 248, 101);
 const kstarColor = Color.fromARGB(255, 243, 219, 1);

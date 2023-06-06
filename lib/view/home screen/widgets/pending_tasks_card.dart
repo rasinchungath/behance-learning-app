@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:online_learning/controller/theme_controller.dart';
 import '../../../constants/constants.dart';
 
 class PendingTasksCard extends StatelessWidget {
-  const PendingTasksCard({
+   PendingTasksCard({
     super.key,
     required this.image,
     required this.subTitle,
@@ -15,15 +17,25 @@ class PendingTasksCard extends StatelessWidget {
   final String subTitle;
   final String date;
 
+  final ThemeController themeController = Get.find();
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {},
       child: Padding(
         padding: const EdgeInsets.only(right: 15, left: 15, bottom: 8),
-        child: Container(
+        child:Obx(() =>  Container(
           width: 320,
-          decoration: containerDecoration,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(22),
+              border: Border.all(
+                width: 1.5,
+                color: themeController.isDarkMode.value
+                    ? Colors.white38
+                    : Colors.grey.shade200,
+              ),
+            ),
           child: Padding(
             padding: const EdgeInsets.only(
               right: 10,
@@ -84,7 +96,7 @@ class PendingTasksCard extends StatelessWidget {
               ],
             ),
           ),
-        ),
+        ),),
       ),
     );
   }

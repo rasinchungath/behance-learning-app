@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../constants/constants.dart';
+import 'package:get/get.dart';
+import '../../../controller/theme_controller.dart';
 
 class HourRatingWidgets extends StatelessWidget {
   HourRatingWidgets(
@@ -15,21 +16,28 @@ class HourRatingWidgets extends StatelessWidget {
   IconData icon2;
   Color? color;
 
+  final ThemeController themeController = Get.find();
+
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Obx(() => Row(
       children: [
         Icon(
           icon1,
           size: 18,
-          color: Colors.black,
         ),
         const SizedBox(
           width: 4,
         ),
         Text(
           text1,
-          style: kRatingTextStyle,
+          style: TextStyle(
+            fontSize: 8,
+            fontWeight: FontWeight.w600,
+            color: themeController.isDarkMode.value
+                ? Colors.white
+                : Colors.black54,
+          ),
         ),
         const SizedBox(
           width: 8,
@@ -37,16 +45,23 @@ class HourRatingWidgets extends StatelessWidget {
         Icon(
           icon2,
           size: 18,
-          color: color ?? Colors.black,
+          color: color ??
+              (themeController.isDarkMode.value ? Colors.white : Colors.black),
         ),
         const SizedBox(
           width: 4,
         ),
         Text(
           text2,
-          style: kRatingTextStyle,
-        )
+          style: TextStyle(
+            fontSize: 8,
+            fontWeight: FontWeight.w600,
+            color: themeController.isDarkMode.value
+                ? Colors.white
+                : Colors.black54,
+          ),
+        ),
       ],
-    );
+    ),);
   }
 }

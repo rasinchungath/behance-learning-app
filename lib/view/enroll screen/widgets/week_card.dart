@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../controller/week_tab_controller.dart';
+import '../../../controller/theme_controller.dart';
 
 class WeekCard extends StatelessWidget {
   WeekCard({
@@ -11,6 +12,7 @@ class WeekCard extends StatelessWidget {
   int index;
 
   final WeekTabController _controller = Get.find();
+  final ThemeController themeController = Get.find();
 
   @override
   Widget build(BuildContext context) {
@@ -28,11 +30,17 @@ class WeekCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(30),
             border: Border.all(
               width: 1.5,
-              color: Colors.black87,
+              color: themeController.isDarkMode.value
+                  ? Colors.white38
+                  : Colors.black87,
             ),
             color: _controller.currentIndex.value == index
-                ? Colors.black
-                : Colors.white,
+                ? themeController.isDarkMode.value
+                    ? Colors.white38
+                    : Colors.black
+                : themeController.isDarkMode.value
+                    ? Colors.black
+                    : Colors.white38,
           ),
           child: Padding(
             padding: const EdgeInsets.only(
@@ -49,7 +57,9 @@ class WeekCard extends StatelessWidget {
                   fontWeight: FontWeight.w600,
                   color: _controller.currentIndex.value == index
                       ? Colors.white
-                      : Colors.black,
+                      : themeController.isDarkMode.value
+                          ? Colors.white
+                          : Colors.black,
                 ),
               ),
             ),
