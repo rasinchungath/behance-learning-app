@@ -83,22 +83,34 @@ class EnrollScreen extends StatelessWidget {
                 height: 15,
               ),
               WeekTabScreen(continuelearning: continuelearning),
+              const SizedBox(
+                height: 80,
+              ),
             ],
           ),
         ),
-        bottomNavigationBar: Padding(
-          padding: const EdgeInsets.only(left: 15, right: 15, bottom: 10),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(30),
-            child: BottomAppBar(
-              elevation: 0,
-              child: CustomButton(
-                label: 'Start course',
-                onpressed: () {},
-              ),
-            ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+        floatingActionButton: Padding(
+          padding: const EdgeInsets.only(left: 15, right: 15, bottom: 0),
+          child: CustomButton(
+            label: 'Start course',
+            onpressed: () {},
           ),
         ),
+
+        // bottomNavigationBar: Padding(
+        //   padding: const EdgeInsets.only(left: 15, right: 15, bottom: 10),
+        //   child: ClipRRect(
+        //     borderRadius: BorderRadius.circular(30),
+        //     child: BottomAppBar(
+        //       elevation: 0,
+        //       child: CustomButton(
+        //         label: 'Start course',
+        //         onpressed: () {},
+        //       ),
+        //     ),
+        //   ),
+        // ),
       ),
     );
   }

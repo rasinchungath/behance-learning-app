@@ -10,14 +10,11 @@ AppBar customAppbar({
   required IconData icon2,
   required VoidCallback onPressedIcon1,
   required VoidCallback onPressedIcon2,
-  
 }) {
   final ThemeController themeController = Get.find();
   return AppBar(
     elevation: 0,
-    // shadowColor: null,
-    // backgroundColor:
-    //     themeController.isDarkMode.value ? Colors.black : Colors.white,
+    shadowColor: null,
     automaticallyImplyLeading: false,
     toolbarHeight: appBarHeight,
     flexibleSpace: SizedBox(

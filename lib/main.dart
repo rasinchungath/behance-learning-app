@@ -16,7 +16,6 @@ void main() {
 class MyApp extends StatelessWidget {
   MyApp({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -29,14 +28,20 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Poppins',
         scaffoldBackgroundColor: Colors.white,
         primaryColor: kprimaryColor,
-        appBarTheme: const AppBarTheme(backgroundColor: Colors.white),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.white,
+        ),
       ),
       darkTheme: ThemeData.dark().copyWith(
-          scaffoldBackgroundColor: Colors.black,
-          appBarTheme: const AppBarTheme(backgroundColor: Colors.black),
-          textTheme: TextTheme().copyWith(
-            bodyMedium: const TextStyle(fontFamily: 'Poppins'),
-          )),
+        primaryColor: kprimaryColor,
+        scaffoldBackgroundColor: Colors.black,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.black,
+        ),
+        textTheme: const TextTheme().copyWith(
+          bodyMedium: const TextStyle(fontFamily: 'Poppins'),
+        ),
+      ),
       home: HomeScreen(),
     );
   }
